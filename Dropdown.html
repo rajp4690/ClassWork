@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #795548;
+        }
+        #menubar {
+            font-family: Inconsolata, Consolas, sans-serif;
+            font-size: 18px;
+            background-color: rgb(30,30,30);
+        }   
+        #main ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        #main ul li {
+            display: inline-block;
+        }
+        #main ul li:hover a{
+            background-color: rgb(60,60,60);
+            color: burlywood;
+        }
+        #main ul li a {
+            display: block;
+            width: 90px;
+            padding: 10px;
+            text-decoration: none;
+            color: rgb(230, 230, 230);
+        }
+        #main li:hover li a {
+            background-color: rgb(30,30,30);
+        }
+        #main ul ul {
+            position: absolute;
+            display: none;
+        }
+        #main ul li:hover ul {
+            display: block;
+        }
+        #main ul ul li {
+            display: block;
+        }
+        #main ul ul li:hover a{
+            color: red;
+        }
+        .text {
+            font-family: Roboto Mono, Consolas, sans-serif;
+            font-size: 40px;
+            margin-top: 200px;
+            text-align: Center;
+            color: rgb(218, 162, 216);
+        }
+    </style>
+
+    <body>
+        <div id="menubar">
+            <div id="main">
+                <ul>
+                    <li><a href="#">File</a>
+                        <ul>
+                            <li><a href="#">New</a></li>
+                            <li><a href="#">Open</a></li>
+                            <li><a href="#">Save</a></li>
+                            <li><a href="#">Exit</a></li>
+                        </ul>
+                    </li><li>
+                    <a href="#">Edit</a>
+                         <ul>
+                            <li><a href="#">Cut</a></li>
+                            <li><a href="#">Copy</a></li>
+                            <li><a href="#">Paste</a></li>
+                            <li><a href="#">Undo</a></li>
+                            <li><a href="#">Find</a></li>
+                        </ul>
+                    </li><li>
+                    <a href="#">View</a>
+                        <ul>
+                            <li><a href="#">Grid</a></li>
+                            <li><a href="#">Full</a></li>
+                            <li><a href="#">Split</a></li>
+                            <li><a href="#">Zoom</a></li>
+                        </ul>
+                    </li><li>
+                    <a href="#">Help</a>
+                        <ul>
+                            <li><a href="#">Update</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="text">
+                (^_^) ||--> Test Site for HTML and CSS <--|| (^_^)
+        </div>
+    </body>
+</html>
