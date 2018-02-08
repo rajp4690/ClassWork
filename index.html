@@ -20,11 +20,15 @@
         top: 25px;
         position: relative;
     }
+
+    .navbar {
+        padding: 0 1rem;
+    }
 </style>
 
 <body>
 
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">
                 <img src="Icon.svg" width="30" height="30" alt="Game">
@@ -54,27 +58,48 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
+    <div class="container" style="margin-top: 80px">
         <div class="text-center">
-            <p class="display-2">Rocket League<span class="badge badge-warning ">Out Now</span></p>
+            <p class="display-2">Rocket League
+                <span class="badge badge-warning ">Out Now</span>
+            </p>
             <p class="lead">Soccer meets driving once again in the long-awaited, physics-based sequel to the beloved arena classic, Supersonic
                 Acrobatic Rocket-Powered Battle-Cars!</p>
             <a role="button" href="https://www.rocketleague.com/game-info/buy" target="_blank" class="btn btn-success btn-lg mt-2">Buy Now</a>
         </div>
 
-        <div class="row mt-5" >
+        <div class="alert alert-success mt-5">
+            Now Available on <b>Nintendo Switch!</b>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+
+        <div class="row mt-5">
             <div class="col-lg-4 col-sm-6">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
+                    <div class="card-header">
+                        <b>New Season</b> coming soon!
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     <img class="card-img-top" src="http://thescoophq.com/wp-content/uploads/2017/05/rocket-league.jpg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">New Season Coming Soon!</h5>
+                        <h5 class="card-title">Season 6 Rewards</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
+                    <div class="card-header">
+                        <b>New DLC</b>
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     <img class="card-img-top" src="http://i0.kym-cdn.com/entries/icons/original/000/025/136/open-graph.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Supersonic Fury</h5>
@@ -84,7 +109,13 @@
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
+                    <div class="card-header">
+                        <b>PC Exclusive!</b>
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
                     <img class="card-img-top" src="https://i.ytimg.com/vi/g3RsfZUK43s/maxresdefault.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Batmobile</h5>
@@ -98,12 +129,20 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            var elements = $(".card .close, .alert .close");
+            elements.click(function (evt) {
+                console.log(evt);
+                $(this).closest(".card, .alert").slideUp();
+            });
+        });
+    </script>
 </body>
 
 </html>
